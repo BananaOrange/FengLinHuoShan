@@ -14,7 +14,7 @@ public class Launcher {
         try {
             Scanner in = new Scanner(System.in);
             while(in.hasNext()){
-	            Dispatcher.interpreter(in.next());
+	            Dispatcher.dispatchCommand(in.next());
 	        }
 	        in.close();
 		}catch(Exception e) {

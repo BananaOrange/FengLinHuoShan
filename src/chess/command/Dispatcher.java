@@ -6,20 +6,14 @@ package chess.command;
  * @date		2019年11月24日
  */
 public class Dispatcher {
-	//指令解释
-	public static CommandType interpreter(String command){
+	/*
+	 * 指令分发
+	 */
+	public static void dispatchCommand(String command) {
 		try {
-			
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return CommandType.UCCI;
-	}
-	
-	//指令分发
-	public static void dispatcher(CommandType commandType) {
-		try {
-			
+			if(command.startsWith("ucci")) {
+				CommandUcci.handleCommand(command);
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
