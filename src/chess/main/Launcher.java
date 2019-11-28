@@ -5,9 +5,10 @@ import java.util.Scanner;
 import chess.command.Dispatcher;
 
 /**
- * @description	    程序入口
+ * 
+ * @description   程序入口  	 
  * @author        BananaOrange
- * @date          2019年11月28日
+ * @date          2019年11月29日
  */
 public class Launcher {
     public static void main(String[] args) {
