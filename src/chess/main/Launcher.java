@@ -3,23 +3,23 @@ package chess.main;
 import java.util.Scanner;
 
 import chess.command.Dispatcher;
+import chess.test.PrintCommandAll;
+import chess.test.PrintCommandNewest;
 
 /**
- * 
- * @description   程序入口  	 
+ * 程序入口	 
  * @author        BananaOrange
- * @date          2019年11月29日
+ * @date          2019年11月30日
  */
 public class Launcher {
     public static void main(String[] args) {
-        try {
-            Scanner in = new Scanner(System.in);
-            while(in.hasNext()){
-                Dispatcher.dispatchCommand(in.next());
-            }
-            in.close();
-        }catch(Exception e) {
-            e.printStackTrace();
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()){
+    	String command = in.nextLine();
+    	//PrintCommandAll.PrintCommand(command);
+    	//PrintCommandNewest.PrintCommand(command);
+            Dispatcher.dispatchCommand(command);
         }
+        in.close();
     }
 }
