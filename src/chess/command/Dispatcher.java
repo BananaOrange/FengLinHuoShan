@@ -14,6 +14,8 @@ public class Dispatcher {
             CommandUcci.handleCommand(command);
         }else if(command.startsWith("quit")) {
             CommandQuit.handleCommand(command);
+        }else if(command.startsWith("position")) {
+            CommandPosition.handleCommand(command);
         }
     }
 }
